@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Inversity_group_Challange.MainPage">
+
+    <Grid>
+        <Grid.Resources>
+            <LinearGradientBrush x:Key="BackgroundBrush" StartPoint="0.3,0" EndPoint="0.9,0.7">
+                <GradientStop Color="White" Offset="0.3"/>
+                <GradientStop Color="#123456" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Resources>
+
+        <Rectangle Grid.Row="0" Grid.RowSpan="2" Fill="{StaticResource BackgroundBrush}"/>
+        <Label Text="Power Pulse" HorizontalOptions="Start" VerticalOptions="Start" TextColor="#7180Ac" FontSize="25" Margin="10" FontAttributes="Bold"/>
+        <RoundRectangle x:Name="Form_Back" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="275" WidthRequest="225" BackgroundColor="#D9D9D9" CornerRadius="30" Opacity="0.8"/>
+        <StackLayout x:Name="Form" Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" Spacing="5">
+            <Label Text="Model" FontSize="18" TextColor="#7180Ac"/>
+            <Entry x:Name="ModelEntry" FontSize="18" WidthRequest="150" TextColor="#7180Ac"/>
+            <Label Text="Milage" FontSize="18" TextColor="#7180Ac"/>
+            <Entry x:Name="MilageEntry" FontSize="18" TextColor="White"/>
+            <Button Text="Get Diagnostics" WidthRequest="130" Margin="0,15,0,0" BackgroundColor="#7180Ac" Clicked="Button_Clicked"/>
+            <!--7180Ac -->
+        </StackLayout>
+
+        <RoundRectangle x:Name="Form_Details" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="305" WidthRequest="245" BackgroundColor="#D9D9D9" CornerRadius="30" Opacity="0.8" IsVisible="false"/>
+        <StackLayout x:Name="DetailsForm" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="false" >
+            <Label Text="Battery Diagnostic" FontSize="20" TextColor="#7180Ac" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,0,0,15"/>
+            <Label Text="Battery Health" FontSize="18" TextColor="#7180Ac"/>
+            <Label x:Name="BatteryHealth" FontSize="18" Margin="0,0,0,10"/>
+            <Label Text="Battery Prediction Forecast" FontSize="18" TextColor="#7180Ac"/>
+            <Label x:Name="BatteryPrediction" FontSize="18" Margin="0,0,0,10"/>
+            <Label Text="Battery Capacity" FontSize="18" TextColor="#7180Ac"/>
+            <Label x:Name="BatteryDescription" FontSize="18" Margin="0,0,0,10"/>
+            <Label Text="Range" FontSize="18" TextColor="#7180Ac"/>
+            <Label x:Name="Range" FontSize="18"/>
+
+        </StackLayout>
+
+        <Button x:Name="Back" Text="Return" WidthRequest="130" HeightRequest="50" BackgroundColor="#7180Ac" HorizontalOptions="End" VerticalOptions="End" Margin="10,0,0,0" IsVisible="false" Clicked="Back_Clicked"/>
+    </Grid>
+
+</ContentPage>
